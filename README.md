@@ -10,7 +10,8 @@ waterShader is doing ray-tracing:\
     ray = surfacePoint - eye\
     reflectedRay = reflect(ray, surfacePointNormal)\
     refractedRay = refract(ray, surfacePointNormal, n_air/n_water)\
-    Calculated the intersectPoint with Cube, sample the color on Cube(getWallColor), which composes tileColor and causticsColor
+    Calculated the intersectPoint of reflectedRay/refractedRay with Cube, sample the color on Cube(getWallColor), which composes tileColor and causticsColor\
+    gl_FragColor = mix(reflectedColor, refractedColor, alpha = (1 - fresnel)*length(refractedRay))
     
 causticsShader is generating causticsTex:\
     There is a light-wave-front mesh.\
