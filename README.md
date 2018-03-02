@@ -7,10 +7,10 @@ http://madebyevan.com/webgl-water/
 2)renderer.js 
 
 waterShader is doing ray-tracing:
-    ray = surfacePoint - eye
-    reflectedRay = reflect(ray, surfacePointNormal)
-    refractedRay = refract(ray, surfacePointNormal, n_air/n_water)
-    Calculated the intersectPoint with Cube, sample the color on Cube(getWallColor), which composes tileColor and causticsColor
+    ray = surfacePoint - eye\
+    reflectedRay = reflect(ray, surfacePointNormal)\
+    refractedRay = refract(ray, surfacePointNormal, n_air/n_water)\
+    Calculated the intersectPoint with Cube, sample the color on Cube(getWallColor), which composes tileColor and causticsColor\
     
 causticsShader is generating causticsTex, 
     There is a light-wave-front mesh.
