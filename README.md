@@ -15,7 +15,9 @@ waterShader is doing ray-tracing:\
     
 causticsShader is generating causticsTex:\
     There is a light-wave-front mesh.\
-    vertexShader calculates oldPos and newPos for each vertex, which is the mesh point projected along ray and refractedRay.\
+    In this program, light-wave-front mesh is equivalent to waterMesh.\
+    vertexShader calculates oldPos and newPos for each vertex, which is the mesh point projected along refractedRay and\
+                                                                   deformed mesh point projected alont ray.\
     oldArea = dFdx(oldPos) * dFdy(oldPos)\
     newArea = dFdx(newPos) * dFdy(newPos)\
     fragmentShader gl_FragColor = (newArea / oldArea, 0, 0, 1)
